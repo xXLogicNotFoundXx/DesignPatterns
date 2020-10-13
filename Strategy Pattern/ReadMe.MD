@@ -1,4 +1,4 @@
-# https://www.youtube.com/watch?v=v9ejT8FO-7I
+https://www.youtube.com/watch?v=v9ejT8FO-7I
 
 * Its about composition rather than inheritance. 
 * The strategy pattern is a family of ALGORITHMS, incapusalets each algorithm and makes them interchangable. 
@@ -21,19 +21,15 @@ Class Duck
 * Display()
 
 Now we have WildDuck, CityDucks, MountainDuck and RubberDuck classes. 
-* WildDuck and CityDucks shares the same Fly() beahvior. 
-* MountainDuck & RubberDuck shares the same Quack() beahvior.
-* WildDuck and MountainDuck shares the same Display() beahvior.
-* CityDuck abd RubberDuck shares the same Display() beahvior. 
+* WildDuck and CityDucks shares the same Fly() beahvior. MountainDuck & RubberDuck shares the same Fly() beahvior.
+* WildDuck and MountainDuck shares the same Display() beahvior. CityDuck abd RubberDuck shares the same Display() beahvior. 
 
 Now at this point you can see lot of code will be copy pasted. You can build different heirarchy but you will end up in a situation where the beahviour needed to be 
-shared horizontally between the classes. So you either have duplicate code and find another solution. 
+shared horizontally between the classes. So you either have duplicate code or find another solution. 
 
 
 The solution for this is to not have any subclasses. We can have Duck class and 3 interfaces in it. 
-* IFlyBehavior
-* IQuackBehavior
-* IDisplayBehavior 
+* IFlyBehavior, IQuackBehavior, IDisplayBehavior 
 
 Each of these interafaces can have concrete classes which implements these beahviors like: 
 * For IFlyBehavior concrete classes JetFly, HopFly which implements the fly beahvior 

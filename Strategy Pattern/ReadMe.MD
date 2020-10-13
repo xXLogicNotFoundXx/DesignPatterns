@@ -21,20 +21,20 @@ Class Duck
 * Display()
 
 Now we have WildDuck, CityDucks, MountainDuck and RubberDuck classes. 
-* WildDuck and CityDucks shares the same Fly() beahvior. MountainDuck & RubberDuck shares the same Fly() beahvior.
-* WildDuck and MountainDuck shares the same Display() beahvior. CityDuck abd RubberDuck shares the same Display() beahvior. 
+* WildDuck, CityDucks shares the same Fly() beahvior. MountainDuck, RubberDuck shares the same Fly() beahvior.
+* WildDuck, MountainDuck shares the same Display() beahvior. CityDuck, RubberDuck shares the same Display() beahvior. 
 
 Now at this point you can see lot of code will be copy pasted. You can build different heirarchy but you will end up in a situation where the beahviour needed to be 
 shared horizontally between the classes. So you either have duplicate code or find another solution. 
 
 
-The solution for this is to not have any subclasses. We can have Duck class and 3 interfaces in it. 
+The solution for this is not to have any subclasses. We can have Duck class and 3 interface obejects in it. 
 * IFlyBehavior, IQuackBehavior, IDisplayBehavior 
 
 Each of these interafaces can have concrete classes which implements these beahviors like: 
-* For IFlyBehavior concrete classes JetFly, HopFly which implements the fly beahvior 
-* For IQuackBehavior concrete classes SimpleQuack, LoudQuack which implements the Quack beahvior 
-* For IDisplayBehavior concrete classes TextDisplay, GUIDisplay which implements the Display beahvior 
+* For IFlyBehavior concrete classes JetFly, HopFly which implements the fly beahvior.
+* For IQuackBehavior concrete classes SimpleQuack, LoudQuack which implements the Quack beahvior.
+* For IDisplayBehavior concrete classes TextDisplay, GUIDisplay which implements the Display beahvior.
 
 
 
@@ -54,10 +54,37 @@ Class Duck{
 }
 ```
 
-Now with this you can create any sort of duck passing appropriate beahvior(Strategy/Algorithms).
+Now with this you can create any sort of duck injecting appropriate beahvior(Strategy/Algorithms).
 
 ```
 Duck cityDuck = new Duck(new JetFly(), new SimpleQuack(), new TextDisplay());
 Duck rubberDuck = new Duck(new HopFly(), new LoudQuack(), new TextDisplay());
+```
+
+### Now, at this point you can add beahviors(Strategy/Algorithms) or change the implementation of the existing beahviour(Strategy/Algorithms) without having callee to change anything.
 
 ```
+Class Client {
+     IStrategy st;
+     
+     Client(IStrategy st){
+          this.st = st;
+     }
+     
+     Run(){
+          st.execute();
+     }    
+}
+     
+IStrategy {
+     execute();
+}
+
+ConcreteStrategy Implements IStrategy {
+     execute(){
+          ...
+          ...
+     }
+}
+```
+

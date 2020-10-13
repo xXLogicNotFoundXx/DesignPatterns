@@ -11,7 +11,7 @@ For eg:
 
 Another thing : 
 * In inheritance sharing algo/implementation downwards is easy. 
-* However, sharing code horizontally is difficult between the classes are difficult. 
+* However, sharing code horizontally is difficult between the classes. 
      
 lets say:  We have a Duck class and other subclasses of Duck. 
 

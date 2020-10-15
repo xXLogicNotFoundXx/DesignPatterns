@@ -1,7 +1,5 @@
 https://www.youtube.com/watch?v=v9ejT8FO-7I
 
-![UML Strategy](http://www.programmingwithwolfgang.com/wp-content/uploads/2018/01/Strategy.jpg)
-
 * Its about composition rather than inheritance. 
 * The strategy pattern is a family of ALGORITHMS, incapusalets each algorithm and makes them interchangable. 
 * Strategy lets the algorithm vary independently from clients that use it.
@@ -36,7 +34,7 @@ The solution for this is not to have any subclasses. We can have Duck class and 
 
 Each of these interafaces can have concrete classes which implements these beahviors like: 
 * For IFlyBehaviorStrategy concrete classes JetFlyStrategy, HopFlyStrategy which implements the fly beahvior.
-* For IQuackBehaviorStrategy concrete classes SimpleQuackStrategy, LoudQuack which implements the Quack beahvior.
+* For IQuackBehaviorStrategy concrete classes SimpleQuackStrategy, LoudQuackStrategy, SqueakQuackStrategy which implements the Quack beahvior.
 * For IDisplayBehaviorStrategy concrete classes TextDisplayStrategy, GUIDisplayStrategy which implements the Display beahvior.
 
 
@@ -61,11 +59,35 @@ Now with this you can create any sort of duck injecting appropriate beahvior(Str
 
 ```
 Duck cityDuck = new Duck(new JetFlyStrategy(), new SimpleQuackStrategy(), new TextDisplayStrategy());
-Duck rubberDuck = new Duck(new HopFlyStrategy(), new LoudQuackStrategy(), new TextDisplayStrategy());
+Duck rubberDuck = new Duck(new HopFlyStrategy(), new SqueakQuackStrategy(), new TextDisplayStrategy());
+
+OR 
+
+Class CityDuck extends Duck {
+     
+     CityDuck(){
+          fb = new JetFlyStrategy();
+          qb = new SimpleQuackStrategy();
+          db = new TextDisplayStrategy();
+     }
+}
+
+Class RubberDuck extends Duck {
+     
+     RubberDuck(){
+          fb = new HopFlyStrategy();
+          qb = new SqueakQuackStrategy();
+          db = new TextDisplayStrategy();
+     }
+}
+
 ```
 
 ### Now, at this point you can add beahviors(Strategy/Algorithms) or change the implementation of the existing beahviour(Strategy/Algorithms) without having callee to change anything.
 
+
+
+![UML Strategy](http://www.programmingwithwolfgang.com/wp-content/uploads/2018/01/Strategy.jpg)
 ```
 Class Client {
      IStrategy st;

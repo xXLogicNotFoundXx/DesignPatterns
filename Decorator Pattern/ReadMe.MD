@@ -6,6 +6,7 @@ Say if you have **Beverage** abstract class and sub classes as **Decaf, Expresso
 How would you add condiments to it like **Soya, Milk, Mocha, Cream** etc?\
 In the end you should be to be able to calculate the cost of the beverage.\
 
+One way to add classes of DecafSoya, DecafMilk, DecafDarkRoast .... but that would cause **class explosion**.\
 One way of doing this would be adding **hasSoy(), hasMilk(), hasMocha(), hasCream()** in **Beverage** class and the cost of the beverage will be calculated depending on all these return values.
 * What if a customer wants a double mocha?
 * At this point you can see new condiments will force us to add new methods and alter the cost method in the superclass.
@@ -20,5 +21,5 @@ Our goal is to allow classes to be easily extended to incorporate new behavior w
 While inheritance is powerful, it doesn’t always lead to the most flexible or maintainable designs.\
 
 
-
+![UML Decorator](/img/UML%20Decorator.png)
 

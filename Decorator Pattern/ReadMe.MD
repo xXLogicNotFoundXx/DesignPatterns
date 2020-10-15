@@ -25,5 +25,7 @@ Our goal is to allow classes to be easily extended to incorporate new behavior w
 
 ![UML Beverage](https://github.com/xXLogicNotFoundXx/DesignPatterns/blob/main/Decorator%20Pattern/img/UMLBeverage.png)
 
-#### In my opinion this wasnt a great example of decorator pattern. You could have had addCondiments(Condiments c) in the Beverage class and you coul iterate through to calulate the total cost. 
+we’re subclassing the abstract class Beverage in order to have the correct type, not to inherit its behavior.\
+The behavior comes in through the composition of decorators.
+## In my opinion this wasn't a great example of decorator pattern. You could have had "addCondiments(Condiments c)" in the Beverage class and you could iterate through to calulate the total cost. 
 

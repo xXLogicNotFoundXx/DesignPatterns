@@ -18,8 +18,12 @@ This violates The Open-Closed Principle.
 
 Our goal is to allow classes to be easily extended to incorporate new behavior without modifying existing code. What do we get if we accomplish this? Designs that are resilient to change and flexible enough to take on new functionality to meet changing requirements.\
 
-While inheritance is powerful, it doesn’t always lead to the most flexible or maintainable designs.\
+**While inheritance is powerful, it doesn’t always lead to the most flexible or maintainable designs.**
 
 
 ![UML Decorator](https://github.com/xXLogicNotFoundXx/DesignPatterns/blob/main/Decorator%20Pattern/img/UML%20Decorator.png)
+
+![UML Beverage](https://github.com/xXLogicNotFoundXx/DesignPatterns/blob/main/Decorator%20Pattern/img/UMLBeverage.png)
+
+#### In my opinion this wasnt a great example of decorator pattern. You could have had addCondiments(Condiments c) in the Beverage class and you coul iterate through to calulate the total cost. 
 

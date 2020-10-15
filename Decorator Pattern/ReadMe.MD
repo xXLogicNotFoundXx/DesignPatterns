@@ -27,5 +27,33 @@ Our goal is to allow classes to be easily extended to incorporate new behavior w
 
 we’re subclassing the abstract class Beverage in order to have the correct type, not to inherit its behavior.\
 The behavior comes in through the composition of decorators.
-## In my opinion this wasn't a great example of decorator pattern. You could have had "addCondiments(Condiments c)" in the Beverage class and you could iterate through to calulate the total cost. 
+### In my opinion this wasn't a great example of decorator pattern. You could have had "addCondiments(Condiments c)" in the Beverage class and you could iterate through to calulate the total cost and the description. 
 
+# Real World Decorators JAVA I/O :
+![UML JAVA IO](https://github.com/xXLogicNotFoundXx/DesignPatterns/blob/main/Decorator%20Pattern/img/UMLJavaIO.png)
+
+Now you can add you own decorator **LowerCaseInputStream** that converts all uppercase characters to lowercase in the input stream.
+
+```
+import java.io.*;
+
+public class LowerCaseInputStream extends FilterInputStream {
+
+	public LowerCaseInputStream(InputStream in) {
+		super(in);
+	}
+ 
+	public int read() throws IOException {
+		int c = super.read();
+		return (c == -1 ? c : Character.toLowerCase((char)c));
+	}
+		
+	public int read(byte[] b, int offset, int len) throws IOException {
+		int result = super.read(b, offset, len);
+		for (int i = offset; i < offset+result; i++) {
+			b[i] = (byte)Character.toLowerCase((char)b[i]);
+		}
+		return result;
+	}
+}
+```

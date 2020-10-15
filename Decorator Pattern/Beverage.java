@@ -9,7 +9,7 @@ public abstract class Beverage {
   public abstract double cost(); 
 }
 
-// DECORATOR ABSTRACT
+// DECORATOR ABSTRACT -- [this doesn't have to be abstract in JAVA IO the decorator base case FilterInputStream is instantiable ] 
 public abstract class CondimentDecorator extends Beverage {    // IMP Decorator extends the base component so it has the same type 
   public abstract String getDescription();
 }

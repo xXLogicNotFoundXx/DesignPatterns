@@ -62,7 +62,7 @@ public class StarbuzzCoffee {
     Beverage beverage = new Espresso(); 
     System.out.println(beverage.getDescription() + “ $” + beverage.cost()); 
     
-    // Coffee 
+    // DarkRoast + 2 Mocha + Whip 
     Beverage beverage2 = new DarkRoast();
     beverage2 = new Mocha(beverage2); 
     beverage2 = new Mocha(beverage2); 

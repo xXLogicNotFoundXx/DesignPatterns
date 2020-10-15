@@ -7,8 +7,8 @@ https://www.youtube.com/watch?v=v9ejT8FO-7I
 * The decision about which algorithm to use until runtime allows the calling code to be more flexible and reusable.
 
 For eg:
-* If you have "List" implementation then rather than implementing sorting algorithm in the List. 
-* We can inject sorting strategy(algo) into the list. And sorting strategy can be independent from the list.
+* **If you have "List" implementation then rather than implementing sorting algorithm in the List.**
+* **We can inject sorting strategy(algo) into the list. And sorting strategy can be independent from the list.**
 
 Another thing : 
 * In inheritance sharing algo/implementation downwards is easy. 

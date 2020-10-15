@@ -23,9 +23,9 @@ Class Duck
 * Fly()
 * Display()
 
-Now we have WildDuck, CityDucks, MountainDuck and RubberDuck classes. 
-* WildDuck, CityDucks shares the same Fly() beahvior. MountainDuck, RubberDuck shares the same Fly() beahvior.
-* WildDuck, MountainDuck shares the same Display() beahvior. CityDuck, RubberDuck shares the same Display() beahvior. 
+Now we have WildDuck, CityDucks, MountainDuck and RubberDuck classes.\
+WildDuck, CityDucks shares the same Fly() beahvior. MountainDuck, RubberDuck shares the same Fly() beahvior.\
+WildDuck, MountainDuck shares the same Display() beahvior. CityDuck, RubberDuck shares the same Display() beahvior.\
 
 Now at this point you can see lot of code will be copy pasted. You can build different heirarchy but you will end up in a situation where the beahviour needed to be 
 shared horizontally between the classes. So you either have duplicate code or find another solution. 
@@ -79,11 +79,11 @@ Class Client {
      }    
 }
      
-IStrategy {
+interface IStrategy {
      execute();
 }
 
-ConcreteStrategy Implements IStrategy {
+Class ConcreteStrategy Implements IStrategy {
      execute(){
           ...
           ...

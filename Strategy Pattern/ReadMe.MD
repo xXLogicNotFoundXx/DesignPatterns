@@ -1,6 +1,6 @@
 https://www.youtube.com/watch?v=v9ejT8FO-7I
 
-![UMP Strategy](http://www.programmingwithwolfgang.com/wp-content/uploads/2018/01/Strategy.jpg)
+![UML Strategy](http://www.programmingwithwolfgang.com/wp-content/uploads/2018/01/Strategy.jpg)
 
 * Its about composition rather than inheritance. 
 * The strategy pattern is a family of ALGORITHMS, incapusalets each algorithm and makes them interchangable. 

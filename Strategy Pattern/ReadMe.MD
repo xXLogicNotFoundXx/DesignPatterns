@@ -32,22 +32,22 @@ shared horizontally between the classes. So you either have duplicate code or fi
 
 
 The solution for this is not to have any subclasses. We can have Duck class and 3 interface obejects in it. 
-* IFlyBehavior, IQuackBehavior, IDisplayBehavior 
+* IFlyBehaviorStrategy, IQuackBehaviorStrategy, IDisplayBehaviorStrategy 
 
 Each of these interafaces can have concrete classes which implements these beahviors like: 
-* For IFlyBehavior concrete classes JetFly, HopFly which implements the fly beahvior.
-* For IQuackBehavior concrete classes SimpleQuack, LoudQuack which implements the Quack beahvior.
-* For IDisplayBehavior concrete classes TextDisplay, GUIDisplay which implements the Display beahvior.
+* For IFlyBehaviorStrategy concrete classes JetFlyStrategy, HopFlyStrategy which implements the fly beahvior.
+* For IQuackBehaviorStrategy concrete classes SimpleQuackStrategy, LoudQuack which implements the Quack beahvior.
+* For IDisplayBehaviorStrategy concrete classes TextDisplayStrategy, GUIDisplayStrategy which implements the Display beahvior.
 
 
 
 ```
 Class Duck{
-  IFlyBehavior fb;
-  IQuackBehavior qb;
-  IDisplayBehavior db;
+  IFlyBehaviorStrategy fb;
+  IQuackBehaviorStrategy qb;
+  IDisplayBehaviorStrategy db;
   
-  Duck(IFlyBehavior fb, IQuackBehavior qb, IDisplayBehavior db){
+  Duck(IFlyBehaviorStrategy fb, IQuackBehaviorStrategy qb, IDisplayBehaviorStrategy db){
   ....
   }
   
@@ -60,8 +60,8 @@ Class Duck{
 Now with this you can create any sort of duck injecting appropriate beahvior(Strategy/Algorithms).
 
 ```
-Duck cityDuck = new Duck(new JetFly(), new SimpleQuack(), new TextDisplay());
-Duck rubberDuck = new Duck(new HopFly(), new LoudQuack(), new TextDisplay());
+Duck cityDuck = new Duck(new JetFlyStrategy(), new SimpleQuackStrategy(), new TextDisplayStrategy());
+Duck rubberDuck = new Duck(new HopFlyStrategy(), new LoudQuackStrategy(), new TextDisplayStrategy());
 ```
 
 ### Now, at this point you can add beahviors(Strategy/Algorithms) or change the implementation of the existing beahviour(Strategy/Algorithms) without having callee to change anything.

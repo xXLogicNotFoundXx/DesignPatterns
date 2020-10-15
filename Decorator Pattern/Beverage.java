@@ -1,4 +1,4 @@
-// COMPONENT ABSTRACT 
+// COMPONENT ABSTRACT - This can be interface too 
 public abstract class Beverage {
   String description = “Unknown Beverage”;
   

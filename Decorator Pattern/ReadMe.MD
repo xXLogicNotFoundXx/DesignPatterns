@@ -21,5 +21,5 @@ Our goal is to allow classes to be easily extended to incorporate new behavior w
 While inheritance is powerful, it doesn’t always lead to the most flexible or maintainable designs.\
 
 
-![UML Decorator](/img/UML%20Decorator.png)
+![UML Decorator](https://github.com/xXLogicNotFoundXx/DesignPatterns/blob/main/Decorator%20Pattern/img/UML%20Decorator.png)
 

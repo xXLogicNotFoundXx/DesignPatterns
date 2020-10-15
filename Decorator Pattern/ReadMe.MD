@@ -57,3 +57,18 @@ public class LowerCaseInputStream extends FilterInputStream {
 	}
 }
 ```
+
+## Use Case 1 
+You can use decorator pattern if you want to deprecate some APIs or a class. We can wrap/decorator that class.\
+You can intercept that API call and either make the original class call OR ignore it OR modify that call as you like.\
+
+## Use Case 2 
+Another one, let's say you have a class and now all the method needed to be Audited and plus you need to add some Logs to all those methods.\
+However, these audit and log depends on some auditEnable/logEnable flag.\
+You can easily acheive that with Decorator Pattern. You can wrap original class with a decorators and depending on the flags you can return :
+```
+new AuditDecorator(new OriginalClass());   			// Audit enabled
+new LogDecorator(new OriginalClass());  			// Logs enabled 
+new AuditDecorator(new LogDecorator(new OriginalClass()))	// Audit & Logs enabled 
+```
+

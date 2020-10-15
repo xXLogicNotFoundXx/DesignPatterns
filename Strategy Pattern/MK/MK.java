@@ -1,4 +1,4 @@
-/*******************************************/
+/******************* Client ************************/
 
 public class Fighter {
     private String mName;
@@ -16,10 +16,13 @@ public class Fighter {
         mKickStrategy.kick();
     }
     
-    public void changeKickStrategy(KickStrategy kickStrategy) {
+    public void changeKickStrategy(KickStrategy kickStrategy) {  // IMP we can also change the strategy in the lifecycle of the object if we want to
         mKickStrategy = kickStrategy;
     }
 }
+
+// NOTE : You can have abstract Fighter and concrete subclasses like Scorpion, SubZero etc with predefined strategy initiated in the constructor. 
+
 
 /************* Strategies ***************/
 public interface KickStrategy {
@@ -33,7 +36,7 @@ public class FlyingKickStrategy implements KickStrategy {
     }
 }
 
-public class SimpleKickStrategy implements KickStrategy {
+public class SimpleKickStrategy implements KickStrategy {       
     @Override
     public void kick() {
         System.out.println("Kicking");
@@ -42,3 +45,16 @@ public class SimpleKickStrategy implements KickStrategy {
 
 
 /************************** MAIN **********************************/
+public class Main {
+ public static void main(String[] args) {
+        Fighter f1 = new Fighter("SubZero", new FlyingKickStrategy(), new BackRollStrategy());
+        f1.kick();
+
+        Fighter f2 = new Fighter("Pandu", new SimpleKickStrategy(), new NoRollStrategy());
+        f2.kick();
+
+        // Pandu gets FlyingKickPower
+        f2.changeKickStrategy(new FlyingKickStrategy());
+        f2.kick();
+ }
+} 

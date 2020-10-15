@@ -14,7 +14,6 @@ public abstract class CondimentDecorator extends Beverage {    // IMP Decorator 
   public abstract String getDescription();
 }
 
-
 /************************************ COMPONENT - Concrete classes ******************/
 public class Espresso extends Beverage {
   public Espresso()    {  description = “Espresso”;}
@@ -30,7 +29,7 @@ public class HouseBlend extends Beverage {
     public HouseBlend() {...}
      public double cost() { ...}
 }
-/* *********************************** END ******************/
+/* *********************************** END COMPONENT - Concrete classes ******************/
 
 
 
@@ -55,7 +54,7 @@ public class Milk extends CondimentDecorator {
   public String getDescription() { return beverage.getDescription() + “, Milk”; }
   public double cost() { return .20 + beverage.cost();} 
 }
-
+/************************************ END  DECORATOR - Concrete classes ******************/
 
 public class StarbuzzCoffee {
   public static void main(String args[]) { 

@@ -25,11 +25,12 @@ Now we have WildDuck, CityDucks, MountainDuck and RubberDuck classes.\
 WildDuck, CityDucks shares the same Fly() beahvior. MountainDuck, RubberDuck shares the same Fly() beahvior.\
 WildDuck, MountainDuck shares the same Display() beahvior. CityDuck, RubberDuck shares the same Display() beahvior.\
 
-Now at this point you can see lot of code will be copy pasted. You can build different heirarchy but you will end up in a situation where the beahviour needed to be 
-shared horizontally between the classes. So you either have duplicate code or find another solution. 
+Now at this point you can see lot of code will be duplicated. You can build different heirarchy but you will end up in a situation where the beahviour needed to be 
+shared horizontally between the classes. So you can either have duplicate code or you have to find another solution. 
 
 
-The solution for this is not to have any subclasses. We can have Duck class and 3 interface obejects in it. 
+The solution for this is definitel not more inheritance. The solution is **composition**.\
+We can have Duck class and 3 interface obejects in it.\
 * IFlyBehaviorStrategy, IQuackBehaviorStrategy, IDisplayBehaviorStrategy 
 
 Each of these interafaces can have concrete classes which implements these beahviors like: 

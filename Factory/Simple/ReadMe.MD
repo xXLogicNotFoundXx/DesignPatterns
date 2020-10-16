@@ -15,7 +15,7 @@ PasswordManagementSSOImp doesnt do anything related to password bcz SSO is on.
 
 For eg 2:\
 You have **Pizza** Product and Concrete products are **CheesePizza, PepperoniPizza**.\
-Then You have **PizzaStoreFactory** and static method **Pizza CreatePizza(Type t)**. (Type is Cheeze or Pepperoni)\
+Then You have **PizzaStoreFactory** and static method **Pizza CreatePizza(Type t);**. (Type is Cheeze or Pepperoni)\
 Depending on the type provided you return CheesePizza OR PepperoniPizza.
 
 

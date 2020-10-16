@@ -6,7 +6,7 @@
 
 Instead of whole lot of classes and instantiating these objects.\
 We can encapsulate the instantiating so that we can make it uniform across all the places.\
-It will be stupid to create encapsulation around “new SomeClass()” but imagine if we need some post processing before we instantiate an object.\
+It will be stupid to create encapsulation around “new SomeClass()” but imagine if we need some post processing before we instantiate an object.
 
 lets say we have **Pizza** product and whole lot of concrete products like **CheezePizza, PepperoniPizaa** etc.\
 we can easily handle that with simple factory(statci factory) programming idiom.\

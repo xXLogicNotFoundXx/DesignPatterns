@@ -16,13 +16,13 @@ So that would create **NYStyleCheesePizza, NYStylePepperoniPizza ... and Chicago
 ![UML Pizza Factory Method Pattern](https://github.com/xXLogicNotFoundXx/DesignPatterns/blob/main/Factory/Factory%20Method%20Pattern/img/UMLPizzaFactoryMethod.png)
 
 ```
-    PizzaStore nyStore = new NYPizzaStore();
-		Pizza pizza = nyStore.orderPizza("cheese"); // orderPizza() is defined in PizzaStore which calls createdPizza ( in this case it is NY pizza creation)
-		System.out.println("Ethan ordered a " + pizza.getName() + "\n");
-    
-    PizzaStore chicagoStore = new ChicagoPizzaStore();
-		pizza = chicagoStore.orderPizza("cheese"); // orderPizza() is defined in PizzaStore which calls createdPizza ( in this case it is chicagoStore pizza creation)
-		System.out.println("Joel ordered a " + pizza.getName() + "\n");
+   PizzaStore nyStore = new NYPizzaStore();
+   Pizza pizza = nyStore.orderPizza("cheese"); // orderPizza() is defined in PizzaStore which calls createdPizza ( in this case it is NY pizza creation)
+   System.out.println("Ethan ordered a " + pizza.getName() + "\n");
+   
+   PizzaStore chicagoStore = new ChicagoPizzaStore();
+   pizza = chicagoStore.orderPizza("cheese"); // orderPizza() is defined in PizzaStore which calls createdPizza ( in this case it is chicagoStore pizza creation)
+   System.out.println("Joel ordered a " + pizza.getName() + "\n");
 ```
 
 BTW, 

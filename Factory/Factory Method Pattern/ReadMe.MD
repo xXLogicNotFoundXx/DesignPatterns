@@ -11,6 +11,6 @@ we can easily handle that with simple factory(statci factory) programming idiom.
 
 Now, lets say you want to open up franchise and for quality control of your operations, you want to have same quality method of baking, boxing pizzas.\
 However, you want to offer different regional style of pizzas in different stores like store in NY and Chicago.
-So that would create **NYStyleCheesePizza, NYStylePepperoniPizza ... and ChicagoStyleCheesePizza, ChicagoStylePepperoniPizza ... ** .
+So that would create **NYStyleCheesePizza, NYStylePepperoniPizza ... and ChicagoStyleCheesePizza, ChicagoStylePepperoniPizza ...**
 
 ![UML Pizza Factory Method Pattern](https://github.com/xXLogicNotFoundXx/DesignPatterns/blob/main/Factory/Factory%20Method%20Pattern/img/UMLPizzaFactoryMethod.png)

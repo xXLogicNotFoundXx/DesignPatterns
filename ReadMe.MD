@@ -1,1 +1,1 @@
-![GitHub Logo](/UML.png)
+![UML](/UML.png)

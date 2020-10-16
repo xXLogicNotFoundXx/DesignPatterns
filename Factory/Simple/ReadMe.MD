@@ -1,6 +1,7 @@
 
 # Simple Factory(Static Factory) is not a pattern.
 
+The Simple Factory isn’t actually a Design Pattern; it’s more of a programming idiom.
 Simple Factory is where you create a class and use (Common Logic OR Conditions) to create different objects.\
 
 Defining a simple factory as a static method is a common technique and is often called a static factory.\

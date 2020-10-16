@@ -27,7 +27,7 @@ shared horizontally between the classes. So you can either have duplicate code o
 
 
 The solution for this is definitel not more inheritance. The solution is **composition**.\
-We can have Duck class and 3 interface obejects in it.\
+We can have Duck class and 3 interface references in it.
 * IFlyBehaviorStrategy, IQuackBehaviorStrategy, IDisplayBehaviorStrategy 
 
 Each of these interafaces can have concrete classes which implements these beahviors like: 
@@ -81,35 +81,11 @@ Class RubberDuck extends Duck {
 
 ```
 
-### Now, at this point you can add beahviors(Strategy/Algorithms) or change the implementation of the existing beahviour(Strategy/Algorithms) without having callee to change anything.
-
+#### Now, at this point you can add beahviors(Strategy/Algorithms) or change the implementation of the existing beahviour(Strategy/Algorithms) without having callee to change anything.
 
 
 ![UML Strategy](http://www.programmingwithwolfgang.com/wp-content/uploads/2018/01/Strategy.jpg)
-```
-Class Client {
-     IStrategy st;
-     
-     Client(IStrategy st){
-          this.st = st;
-     }
-     
-     Run(){
-          st.execute();
-     }    
-}
-     
-interface IStrategy {
-     execute();
-}
 
-Class ConcreteStrategy Implements IStrategy {
-     execute(){
-          ...
-          ...
-     }
-}
-```
 
 Use Case 1 : 
 * **If you have "List" implementation then rather than implementing sorting algorithm in the List.**

@@ -15,7 +15,7 @@ https://www.youtube.com/watch?v=v-GiuMmsXj4
 The point is you have two products ProductA and ProductB and you want to make sure you create these products with some dependacy.
 For e.g. You can create ConcreteProductA1 and ConcreteProductB1 but having ConcreteProductA1 & ConcreteProductB2 together doesnt makes sense.
 
-Use Case 1: 
+Use Case 1:\
 Imagine you have some app and you want to have two themes DarkTheam and LightTheam.\
 DarkTheme probably have black background and a white text. It doesnt make sense for DarkTheam to have background as black and text as black too.\
 So you can have a factory that returns families of related or dependent objects. ( Background color,  Text style, Text color etc.)

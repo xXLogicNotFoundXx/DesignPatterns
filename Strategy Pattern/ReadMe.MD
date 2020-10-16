@@ -83,7 +83,10 @@ Class RubberDuck extends Duck {
 
 #### Now, at this point you can add beahviors(Strategy/Algorithms) or change the implementation of the existing beahviour(Strategy/Algorithms) without having callee to change anything.
 
+### DUCK Strategy UML
+![UML Strategy](https://github.com/xXLogicNotFoundXx/DesignPatterns/blob/main/Strategy%20Pattern/img/UMLDuckStrategy.png)
 
+# Strategy Pattern UML
 ![UML Strategy](http://www.programmingwithwolfgang.com/wp-content/uploads/2018/01/Strategy.jpg)
 
 

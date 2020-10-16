@@ -1,21 +1,18 @@
-https://www.youtube.com/watch?v=v9ejT8FO-7I
-
+* https://www.youtube.com/watch?v=v9ejT8FO-7I
 * Its about composition rather than inheritance. 
 * The strategy pattern is a family of ALGORITHMS, incapusalets each algorithm and makes them interchangable. 
 * Strategy lets the algorithm vary independently from clients that use it.
 * Enables selecting an algorithm at runtime.
 * The decision about which algorithm to use until runtime allows the calling code to be more flexible and reusable.
 
-For eg:
-* **If you have "List" implementation then rather than implementing sorting algorithm in the List.**
-* **We can inject sorting strategy(algo) into the list. And sorting strategy can be independent from the list.**
-
-Another thing : 
+In this, will learn:
+* Inheritance has its problems, and there are other ways of achieving reuse.
+* Design Principle : Favor composition over inheritance. (Though not always, Composition it has its advantages & disadvantages) 
 * In inheritance sharing algo/implementation downwards is easy. 
 * However, sharing code horizontally is difficult between the classes. 
-     
-lets say:  We have a Duck class and other subclasses of Duck. 
 
+     
+lets say:  We have a Duck class and other subclasses of Duck.\
 Class Duck
 * Quack()
 * Fly()
@@ -113,4 +110,8 @@ Class ConcreteStrategy Implements IStrategy {
      }
 }
 ```
+
+Use Case 1 : 
+* **If you have "List" implementation then rather than implementing sorting algorithm in the List.**
+* **We can inject sorting strategy(algo) into the list. And sorting strategy can be independent from the list.**
 

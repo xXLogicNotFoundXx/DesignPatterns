@@ -1,5 +1,5 @@
 # Factory Method Pattern
-## The Factory Method Pattern defines an interface for creating an object, but lets subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses. 
+## The Factory Method Pattern defines an interface(or an abstract class) for creating an object, but lets subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses. 
 
 * This pattern is a framework in a way that it encapsulates product knowledge into each creator.
 
@@ -13,3 +13,4 @@ Now, lets say you want to open up franchise and for quality control of your oper
 However, you want to offer different regional style of pizzas in different stores like store in NY and Chicago.
 So that would create **NYStyleCheesePizza, NYStylePepperoniPizza ... and ChicagoStyleCheesePizza, ChicagoStylePepperoniPizza ... ** .
 
+![UML Pizza Factory Method Pattern](https://github.com/xXLogicNotFoundXx/DesignPatterns/blob/main/Factory/Factory%20Method%20Pattern/img/UMLPizzaFactoryMethod.png)

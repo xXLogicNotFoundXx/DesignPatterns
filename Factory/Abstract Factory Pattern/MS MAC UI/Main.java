@@ -1,9 +1,9 @@
 public class Main {
 
     public static void main(String[] args) {
-	      GUIBuilderClient guiBuilder=new GUIBuilderClient();
+	GUIBuilderClient guiBuilder=new GUIBuilderClient();
 
-	      System.out.println("abstractWidgetFactory becomes concreteMSWidgetFactory");
+	System.out.println("abstractWidgetFactory becomes concreteMSWidgetFactory");
         AbstractWidgetFactory abstractWidgetFactory=new ConcreteMSWidgetFactory();
         guiBuilder.buildElements(abstractWidgetFactory);
 

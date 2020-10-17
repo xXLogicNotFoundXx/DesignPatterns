@@ -1,6 +1,6 @@
 ## Single Difference beetween Factory Method Pattern and Abstract Factory Pattern is :
-* Factory Method Pattern **construct a single object**
-* Abstract Factory Pattern **construct multiple objects**
+* Factory Method Pattern construct a **single object**
+* Abstract Factory Pattern construct **multiple objects**
 
 Technically it is very simple but if you think about it, it is like Dependancy Injection. 
 

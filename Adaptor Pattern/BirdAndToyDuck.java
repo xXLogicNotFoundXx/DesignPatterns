@@ -4,15 +4,12 @@ interface Bird {
     public void makeSound(); 
 } 
   
-class Sparrow implements Bird 
-{ 
-    // a concrete implementation of bird 
-    public void fly() 
-    { 
+class Sparrow implements Bird {    // can fly and makeSound
+    public void fly() { 
         System.out.println("Flying"); 
     } 
-    public void makeSound() 
-    { 
+    
+    public void makeSound() { 
         System.out.println("Chirp Chirp"); 
     } 
 } 
@@ -22,7 +19,7 @@ interface ToyDuck {
     public void squeak(); 
 } 
   
-class PlasticToyDuck implements ToyDuck { 
+class PlasticToyDuck implements ToyDuck {  
     public void squeak() { 
         System.out.println("Squeak"); 
     } 

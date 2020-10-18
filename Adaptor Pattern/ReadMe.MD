@@ -22,11 +22,11 @@ We place a proxy instead of calling original object. Reasons could be security/c
 #### Decorator
 Is adding behaviour to some particular object. Without opening up that object and chaning it. 
 
-
+## For Adptor Pattern 
 * The intention is not to change the underlying behaviour of anything, add beahviour or anything like that. 
 * You adapt something and blindly pass on the request. Adaptors do not consist any inteligent logic simply just pass on the request to another adptee. 
 
-
+## Adptor Pattern 
 * Adaptor must implement Target interface.
 * Adaptor should have a constructor method with an adaptee object as a parameter. (That is aggregation [adaptee can exist without adaptor]).
 * Thats it.

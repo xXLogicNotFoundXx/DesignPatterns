@@ -27,8 +27,8 @@ So that would create **NYStyleCheesePizza, NYStylePepperoniPizza ... and Chicago
 ```
 
 BTW, 
-* You can define a default factory method to produce some concrete product.\
-* Then you always have a means of creating products even without the need of subclass creators.\
+* You can define a default factory method to produce some concrete product.
+* Then you always have a means of creating products even without the need of subclass creators.
 * Here, you can have default definition of createPizza() in PizzaStore class which would return simple pizzas like CheezePizza, PepperoniPizaa.
 
 However, 

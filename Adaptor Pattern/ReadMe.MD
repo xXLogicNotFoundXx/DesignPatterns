@@ -11,7 +11,7 @@ Four confusing patterns are :
 You have to consistently look them up to keep them aparat. 
 
 #### Adaptor
-* Adaptor Pattern is making two interfaces that are not compatible, compatible. 
+Adaptor Pattern is making two interfaces that are not compatible, compatible. 
 
 #### Facade
 Taking bunch of complext interation and creating a Facade that you can use. 
@@ -23,8 +23,8 @@ We place a proxy instead of calling original object. Reasons could be security/c
 Is adding behaviour to some particular object. Without opening up that object and chaning it. 
 
 ## For Adptor Pattern 
-* The intention is not to change the underlying behaviour of anything, add beahviour or anything like that. 
-* You adapt something and blindly pass on the request. Adaptors do not consist any inteligent logic simply just pass on the request to another adptee. 
+* The intention is not to change the underlying behaviour of any object OR add beahviour OR anything like that. 
+* You adapt something and blindly pass on the request. Adaptors do not consist any intelligent logic, it simply pass on the request to adptee. 
 
 ## Adptor Pattern 
 * Adaptor must implement Target interface.

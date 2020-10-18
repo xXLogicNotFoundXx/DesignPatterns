@@ -14,7 +14,7 @@ class Sparrow implements Bird {    // can fly and makeSound
     } 
 } 
 /*******************/
-// Client
+// Target
 interface ToyDuck { 
     public void squeak(); 
 } 

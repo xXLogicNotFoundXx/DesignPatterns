@@ -31,14 +31,12 @@ You’ll find a lot of variants of the Proxy Pattern in the real world; what the
 the client is making on the subject.
 
 **ImageProxy seems just like a Decorator to me. I mean, we are basically wrapping one object with another and then delegating the calls to the ImageIcon. What am I missing?**\
-Sometimes Proxy and Decorator look very similar, but their purposes are different: a decorator adds behavior to a class, while a proxy controls access
-to it.\
-You might say,“Isn’t the loading message adding behavior?” In someways it is; however, more importantly, the ImageProxy is controlling access to an ImageIcon.\
-How does it control access? Well, think about it this way: the proxy is decoupling the client from the ImageIcon.\
-If they were coupled the client would have to wait until each image is retrieved before it could paint it entire interface.\ 
-The proxy controls access to the ImageIcon so that before it is fully created, the proxy provides another on screen representation.\
-Once the ImageIcon is created the proxy allows access.\
-Technically Proxy sometimes also handles the object creation of RealSubject Decorator accepts already created objects.
+* Sometimes Proxy and Decorator look very similar, but their purposes are different: a decorator adds behavior to a class, while a proxy controls access
+to it.
+* You might say,“Isn’t the loading message adding behavior?” In someways it is; however, more importantly, the ImageProxy is controlling access to an ImageIcon.
+How does it control access? Well, think about it this way: the proxy is decoupling the client from the ImageIcon.If they were coupled the client would have to wait until each image is retrieved before it could paint it entire interface.
+* The proxy controls access to the ImageIcon so that before it is fully created, the proxy provides another on screen representation.Once the ImageIcon is created the proxy allows access.
+* Technically Proxy sometimes also handles the object creation of RealSubject Decorator accepts already created objects.
 
 
 **How do I make clients use the Proxy rather than the Real Subject?**\
@@ -47,5 +45,5 @@ One common technique is to provide a factory that instantiates and returns the s
 **You could implement something similar to the ImageProxy that caches past retrievals.**\
 A caching proxy maintains a cache of previous created objects and when a request is made it returns cached object, if possible.
 
-
-* Adapter changes the interface of the objects it adapts, while the Proxy implements the same interface.
+**How about Adaptor and Proxy?**\
+Adapter changes the interface of the objects it adapts, while the Proxy implements the same interface.

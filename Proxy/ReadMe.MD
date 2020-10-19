@@ -19,11 +19,18 @@ First we have a Subject, which provides an interface for the RealSubject and the
 
 ### Virtual Proxy
 lets say, ImageIcon which loads image from network URL and displays it (Expensive to load).\
-So we can create ImageProxy which would tell client "Loading CD cover, please wait..." msg untill our ImageIcon object is ready.\
-ImageProxy will also returns the height and width required to show the message. However, if the ImageIcon is ready we can delegate those to RealObject.
+So we can create ImageProxy which would tell client "Loading CD cover, please wait..." msg untill our ImageIcon object is ready.
 
 How ImageProxy is going to work:
 * ImageProxy first creates an ImageIcon and starts loading it from a network URL.
 * While the bytes of the image are being retrieved, ImageProxy displays “Loading CD cover, please wait...”.
-* When the image is fully loaded, ImageProxy del- egates all method calls to the image icon, including paintIcon(), getWidth() and getHeight().
+* When the image is fully loaded, ImageProxy delegates all method calls to the image icon, including paintIcon(), getWidth() and getHeight().
 * If the user requests a new image, we’ll create a new proxy and start the process over
+
+You’ll find a lot of variants of the Proxy Pattern in the real world; what they all have in common is that they intercept a method invocation that
+the client is making on the subject.
+
+**ImageProxy seems just like a Decorator to me. I mean, we are basically wrapping one object with another and then delegating the calls to the ImageIcon. What am I missing?**\
+Sometimes Proxy and Decorator look very similar, but their purposes are different: a decorator adds behavior to a class, while a proxy controls access
+to it. You might say,“Isn’t the loading message adding behavior?” In someways it is; however, more importantly, the ImageProxy is controlling access
+to an ImageIcon. How does it control access? Well, think about it this way: the proxy is decoupling the client from the ImageIcon. If they were coupled the client would have to wait until each image is retrieved before it could paint it entire interface. The proxy controls access to the ImageIcon so that before it is fully created, the proxy provides another on screen representation. Once the ImageIcon is created the proxy allows access.

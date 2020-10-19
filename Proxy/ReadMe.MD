@@ -30,7 +30,7 @@ How ImageProxy is going to work:
 You’ll find a lot of variants of the Proxy Pattern in the real world; what they all have in common is that they intercept a method invocation that
 the client is making on the subject.
 
-**ImageProxy seems just like a Decorator to me. I mean, we are basically wrapping one object with another and then delegating the calls to the ImageIcon. What am I missing?**\
+**ImageProxy seems just like a Decorator to me. I mean, we are basically wrapping one object with another and then delegating the calls to the ImageIcon. What am I missing?**
 * Sometimes Proxy and Decorator look very similar, but their purposes are different: a decorator adds behavior to a class, while a proxy controls access
 to it.
 * You might say,“Isn’t the loading message adding behavior?” In someways it is; however, more importantly, the ImageProxy is controlling access to an ImageIcon.

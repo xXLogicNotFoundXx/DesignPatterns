@@ -67,8 +67,8 @@ Another one, let's say you have a class and now all the method needed to be Audi
 However, these audit and log depends on some auditEnable/logEnable flag.\
 You can easily acheive that with Decorator Pattern. You can wrap original class with a decorators and depending on the flags you can return :
 ```
-new AuditDecorator(new OriginalClass());   			// Audit enabled
-new LogDecorator(new OriginalClass());  			// Logs enabled 
-new AuditDecorator(new LogDecorator(new OriginalClass()))	// Audit & Logs enabled 
+new AuditDecorator(new ConcreteComponent());   			// Audit enabled
+new LogDecorator(new ConcreteComponent());  			// Logs enabled 
+new AuditDecorator(new LogDecorator(new ConcreteComponent()))	// Audit & Logs enabled 
 ```
 

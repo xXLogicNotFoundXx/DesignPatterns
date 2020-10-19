@@ -32,12 +32,12 @@ the client is making on the subject.
 
 **ImageProxy seems just like a Decorator to me. I mean, we are basically wrapping one object with another and then delegating the calls to the ImageIcon. What am I missing?**\
 Sometimes Proxy and Decorator look very similar, but their purposes are different: a decorator adds behavior to a class, while a proxy controls access
-to it. 
-You might say,“Isn’t the loading message adding behavior?” In someways it is; however, more importantly, the ImageProxy is controlling access
-to an ImageIcon. How does it control access? Well, think about it this way: the proxy is decoupling the client from the ImageIcon. 
-If they were coupled the client would have to wait until each image is retrieved before it could paint it entire interface. 
-The proxy controls access to the ImageIcon so that before it is fully created, the proxy provides another on screen representation. 
-Once the ImageIcon is created the proxy allows access.
+to it.\
+You might say,“Isn’t the loading message adding behavior?” In someways it is; however, more importantly, the ImageProxy is controlling access to an ImageIcon.\
+How does it control access? Well, think about it this way: the proxy is decoupling the client from the ImageIcon.\
+If they were coupled the client would have to wait until each image is retrieved before it could paint it entire interface.\ 
+The proxy controls access to the ImageIcon so that before it is fully created, the proxy provides another on screen representation.\
+Once the ImageIcon is created the proxy allows access.\
 Technically Proxy sometimes also handles the object creation of RealSubject Decorator accepts already created objects.
 
 

@@ -34,3 +34,12 @@ the client is making on the subject.
 Sometimes Proxy and Decorator look very similar, but their purposes are different: a decorator adds behavior to a class, while a proxy controls access
 to it. You might say,“Isn’t the loading message adding behavior?” In someways it is; however, more importantly, the ImageProxy is controlling access
 to an ImageIcon. How does it control access? Well, think about it this way: the proxy is decoupling the client from the ImageIcon. If they were coupled the client would have to wait until each image is retrieved before it could paint it entire interface. The proxy controls access to the ImageIcon so that before it is fully created, the proxy provides another on screen representation. Once the ImageIcon is created the proxy allows access.
+
+**How do I make clients use the Proxy rather than the Real Subject?**\
+One common technique is to provide a factory that instantiates and returns the subject. Because this happens in a factory method we can then wrap the subject with a proxy before returning it. The client never knows or cares that it’s using a proxy instead of the real thing.
+
+**You could implement something similar to the ImageProxy that caches past retrievals.**\
+A caching proxy maintains a cache of previous created objects and when a request is made it returns cached object, if possible.
+
+
+* Adapter changes the interface of the objects it adapts, while the Proxy implements the same interface.

@@ -21,4 +21,5 @@ This Will result into :
 4. Classes are organized in a structure that requires a lot of work to add a new caffeine beverage.
 5. Knowledge of the algorithm and how to implement it is distributed over many classes.
 
-![](https://github.com/xXLogicNotFoundXx/DesignPatterns/blob/main/Template%20Method%20Pattern/Template%20Method%20Pattern.pdf)
+You can use template method pattern (with hooks if you want) : 
+

@@ -21,5 +21,16 @@ This Will result into :
 4. Classes are organized in a structure that requires a lot of work to add a new caffeine beverage.
 5. Knowledge of the algorithm and how to implement it is distributed over many classes.
 
-You can use template method pattern (with hooks if you want) : 
+You can use template method pattern (with hooks if you want) :
+![](https://github.com/xXLogicNotFoundXx/DesignPatterns/blob/main/Template%20Method%20Pattern/img/CoffeeTeaTemplateMethod.png)
 
+**The way we added a template method to abstract class which defines the algorith and allows subclasses to provide the implementation for one or more steps thats the template Method Pattern!**
+![](https://github.com/xXLogicNotFoundXx/DesignPatterns/blob/main/Template%20Method%20Pattern/img/UMLTemplateMethod.png)
+
+
+Now lets talk about hooks. **Hooks** are nothing but concrete methods that do nothing by default in abstract class but they are there to have additional conditions for subclasses to implement in an algorithm.\
+Hook may provide a way for a subclass to implement an optional part of an algorithm.\
+**What if customer doesnt want additional condiments?**
+
+![](https://github.com/xXLogicNotFoundXx/DesignPatterns/blob/main/Template%20Method%20Pattern/img/CoffeeTeaWithHook1.png)
+![](https://github.com/xXLogicNotFoundXx/DesignPatterns/blob/main/Template%20Method%20Pattern/img/CoffeeTeaWithHook2.png)

@@ -29,8 +29,9 @@ You can use template method pattern (with hooks if you want) :
 ![](https://github.com/xXLogicNotFoundXx/DesignPatterns/blob/main/Template%20Method%20Pattern/img/UMLTemplateMethod.png)
 
 
-Now lets talk about hooks. **Hooks** are nothing but concrete methods that do nothing by default in abstract class but they are there to have additional conditions for subclasses to implement in an algorithm.\
-**What if customer doesnt want additional condiments?**
+## Hooks
+* Hooks are nothing but concrete methods that do nothing by default in abstract class but they are there to have additional conditions for subclasses to implement in an algorithm.
+* What if customer doesnt want additional condiments?**
 
 ![](https://github.com/xXLogicNotFoundXx/DesignPatterns/blob/main/Template%20Method%20Pattern/img/CoffeeTeaWithHook1.png)
 ![](https://github.com/xXLogicNotFoundXx/DesignPatterns/blob/main/Template%20Method%20Pattern/img/CoffeeTeaWithHook2.png)

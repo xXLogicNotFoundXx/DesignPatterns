@@ -9,5 +9,4 @@ OO Principles
 
 ![UML](/UML.png)
 
-There is no silver bullet. You need to adapt the design pattern to your problem and not try to adapt your problem to the design pattern. 
 

@@ -24,13 +24,20 @@ This Will result into :
 You can use template method pattern (with hooks if you want) :
 ![](https://github.com/xXLogicNotFoundXx/DesignPatterns/blob/main/Template%20Method%20Pattern/img/CoffeeTeaTemplateMethod.png)
 
-**The way we added a template method to abstract class which defines the algorith and allows subclasses to provide the implementation for one or more steps thats the template Method Pattern!**
+**The way we added a template method to abstract class which defines the algorithm and allows subclasses to provide the implementation for one or more steps thats the template Method Pattern!**
+
 ![](https://github.com/xXLogicNotFoundXx/DesignPatterns/blob/main/Template%20Method%20Pattern/img/UMLTemplateMethod.png)
 
 
 Now lets talk about hooks. **Hooks** are nothing but concrete methods that do nothing by default in abstract class but they are there to have additional conditions for subclasses to implement in an algorithm.\
-Hook may provide a way for a subclass to implement an optional part of an algorithm.\
 **What if customer doesnt want additional condiments?**
 
 ![](https://github.com/xXLogicNotFoundXx/DesignPatterns/blob/main/Template%20Method%20Pattern/img/CoffeeTeaWithHook1.png)
 ![](https://github.com/xXLogicNotFoundXx/DesignPatterns/blob/main/Template%20Method%20Pattern/img/CoffeeTeaWithHook2.png)
+
+## Use Case 1: Sorting 
+![](https://github.com/xXLogicNotFoundXx/DesignPatterns/blob/main/Template%20Method%20Pattern/img/SortingTemplateMethod.png)
+
+Here we are not extendind Arrays class though os it not like textbook template method pattern.\
+Sometimes we have to modify to fit the context and implementation constraints.\
+In general, you can’t subclass a Java array and they wanted the sort to be used on all arrays (and each array is a different class). So they defined a static method and deferred the comparison part of he algorithm to the items being sorted.

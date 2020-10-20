@@ -38,6 +38,13 @@ Now lets talk about hooks. **Hooks** are nothing but concrete methods that do no
 ## Use Case 1: Sorting 
 ![](https://github.com/xXLogicNotFoundXx/DesignPatterns/blob/main/Template%20Method%20Pattern/img/SortingTemplateMethod.png)
 
-Here we are not extendind Arrays class though os it not like textbook template method pattern.\
-Sometimes we have to modify to fit the context and implementation constraints.\
-In general, you can’t subclass a Java array and they wanted the sort to be used on all arrays (and each array is a different class). So they defined a static method and deferred the comparison part of he algorithm to the items being sorted.
+Here we are not extendind Arrays class though. So how is it template method pattern?\
+* In general, you can’t subclass a Java array and they wanted the sort to be used on all arrays (and each array is a different class). So they defined a static method and deferred the comparison part of the algorithm to the items being sorted.
+
+
+## Use Case 2 : java.io
+* java.io has a **read()** method in InputStream that subclasses must implement and is used by the Template Method **read(byte b[], int off, int len)**
+
+## Template Method VS Strategy 
+* Template Method is to define the outline of an algorithm, but let my subclasses do some of the work. That way, I can have different implementations of an algorithm’s individual steps, but keep control over the algorithm’s structure. Template Method there is no composition. 
+* Strategy defines a family of algorithms (Entire Algorithm) and make them interchangeable. Since each algorithm is encapsulated, the client can use different algorithms easily.

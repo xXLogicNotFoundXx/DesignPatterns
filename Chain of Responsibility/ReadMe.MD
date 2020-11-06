@@ -1,10 +1,8 @@
 ## Chain of Responsibility
-The chain of responsibility pattern creates a chain of handler objects for a request.\
-This pattern decouples sender and receiver of a request based on type of request. This pattern comes under behavioral patterns.
+The chain of responsibility pattern creates a chain of handler objects for a request. This pattern comes under behavioral patterns.
 
-With the Chain of Responsibility Pattern, you create a chain of objects that examine a request. Each object in turn examines the request and handles it, or passes it on to the next object in the chain.
-
-You can modify in way that every chain object handle the request for example. 
+## With the Chain of Responsibility Pattern, you create a chain of objects that examine a request. Each object in turn examines the request and handles it, or passes it on to the next object in the chain.
+It doesnt have to handle/pass relation. You can modify in way that every chain object handle the request for example. 
 Let say You have a looger and you wan to write logs to File, DB and Console too. You can create a Chain of the loggers and each one can write it to respective places.
 
 Think of it as a Linked List nodes of different child classes and each one handles/passes the request to next object in the chain.

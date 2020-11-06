@@ -1,5 +1,6 @@
 public class ChainPatternDemo {
-	
+ 
+   // Nice that we have static factory method idiom for creating a chain. 
    private static AbstractLogger getChainOfLoggers(){
 
       AbstractLogger errorLogger = new ErrorLogger(AbstractLogger.ERROR);

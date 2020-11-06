@@ -9,7 +9,7 @@ Let say you wan to write logs to the File, DB and Console too. You can create a 
 Think of it as a Linked List nodes of different child classes and each one handles/passes the request to next object in the chain.\
 It doesn have to be this simple though. You can have mechanism on which you decide what chain object could handle request & pass  OR  just simply pass it. 
 
-In case of logger we can have log level and depending on the log level appropriate chain object and write those logs.  
+In case of logger we can have log level and depending on the log level appropriate chain object can write that log.  
 
 ![](https://github.com/xXLogicNotFoundXx/DesignPatterns/blob/main/Chain%20of%20Responsibility/img/Chain%20of%20Responsibility.png)
 

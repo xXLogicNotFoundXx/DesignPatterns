@@ -20,7 +20,17 @@ public abstract class AbstractLogger {
          nextLogger.logMessage(level, message);
       }
    }
-
-   abstract protected void write(String message);
+   
+   // See how this method is protected and called in public method logMessage()
+   // Subclasses are supposed to implement this method/ handle this
+   abstract protected void write(String message);   
+	
+  
+   /*     NOTE
+   In a way this specific one the way we implemented. 
+   It is almost like template method pattern but has a chain in it. 
+   logMessage() is our template method. 
+   write() is our primitive method which subclasses are supposed to handle.
+   */
 	
 }

@@ -1,6 +1,7 @@
 ## Chain of Responsibility
-The chain of responsibility pattern creates a chain of handler objects for a request. This pattern comes under behavioral patterns.
-This pattern allows you to add or remove responsibilities dynamically by changing the members or order of the chain.
+The chain of responsibility pattern creates a chain of handler objects for a request. This pattern comes under behavioral patterns.\
+This pattern allows you to add or remove responsibilities dynamically by changing the members or order of the chain.\
+https://www.tutorialspoint.com/design_pattern/chain_of_responsibility_pattern.htm
 
 ### With the Chain of Responsibility Pattern, you create a chain of objects that examine a request. Each object in turn examines the request and handles it, or passes it on to the next object in the chain.
 It doesnt have to be handle/pass relationship. You can modify in way that every chain object handle the request for example. 

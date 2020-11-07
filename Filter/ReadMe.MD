@@ -53,3 +53,5 @@ It would be awesome if :
   // returns single males of 30+ age 
   singleMaleAgeThirtyPlus.meetCriteria(people); 
 ```
+
+https://www.tutorialspoint.com/design_pattern/filter_pattern.htm

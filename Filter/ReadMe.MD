@@ -29,7 +29,7 @@ Now, in retrospect you may think we can write intersection function:
 It would be awesome if : 
 * If we could create lots of criaterias and hardly touch them.
 * If we want to add criteria we dont touch existing code (less testing/impact).
-* If we could combine them in AND/OR however we want and create a single criteria out of it. 
+* If we could combine them with AND/OR in whatever fasion and create a single criteria out of it. 
 
 
 

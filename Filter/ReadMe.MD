@@ -33,4 +33,13 @@ It would be awesome if :
 
 ![](https://github.com/xXLogicNotFoundXx/DesignPatterns/blob/main/Filter/FilterPattern.png)
 
-
+```
+  Criteria male = new CriteriaMale();
+  Criteria female = new CriteriaFemale();
+  Criteria single = new CriteriaSingle();
+  Criteria singleMale = new AndCriteria(single, male);  // this will call meetCriateria on single and then male criterias then it will perform INTERSECTION on it.
+  Criteria singleOrFemale = new OrCriteria(single, female);  // ..... then it will perform UNION on it.
+  
+  // You can keep adding criteria to create chain of them 
+  Criteria singleMaleAgeThirtyPlus = new AndCriteria(singleMale, new AgeCriteria(30,Interger.MAX_VALUE)); 
+```

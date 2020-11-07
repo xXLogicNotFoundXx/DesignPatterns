@@ -37,8 +37,12 @@ It would be awesome if :
   Criteria male = new CriteriaMale();
   Criteria female = new CriteriaFemale();
   Criteria single = new CriteriaSingle();
-  Criteria singleMale = new AndCriteria(single, male);  // this will call meetCriateria on single and then male criterias then it will perform INTERSECTION on it.
-  Criteria singleOrFemale = new OrCriteria(single, female);  // ..... then it will perform UNION on it.
+  
+  // this will call meetCriateria on single and then male criterias then it will perform INTERSECTION on it.
+  Criteria singleMale = new AndCriteria(single, male);  
+  
+  // ..... then it will perform UNION on it.
+  Criteria singleOrFemale = new OrCriteria(single, female);  
   
   singleMale(people); // returns single males 
   

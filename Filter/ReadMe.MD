@@ -1,0 +1,35 @@
+## Filter/Criteria Pattern
+* Filter pattern or Criteria pattern is a design pattern that enables developers to filter a set of objects using different criteria and chaining them in a decoupled way through logical operations.
+* This type of design pattern comes under structural pattern as this pattern combines multiple criteria to obtain single criteria.
+
+Let say you have a Person class and now you have to filter Person base on its age, sex, and status ( of course you can have more filters in future).
+Moreover, you have conditions where it could be AND of two filter or more and it could be OR of two filter or more.
+
+Some one can up with a class and static methods from each criteria like:
+* List<Person> getSingles(List<Person>); 
+* List<Person> getMales(List<Person>); 
+* You can call singleMales = getSingles(getMales(persons));
+* How would you call this for OR criaterias?
+
+#### Union 
+Obviosly you can write a union function:
+* List<Person> union(List<Person>,List<Person>){..};
+* singlePeopleOrMales = union(getSingles(persons), getMales(persons))
+
+#### Intersection 
+Now, in retrospect you may think we can write intersection function:
+* List<Person> intersection(List<Person>,List<Person>){..};
+* singleMales = intersection(getSingles(persons), getMales(persons))
+
+#### Nice but 
+* Every time you add a criateria you touch that big class and you keep on adding criterias.
+* That will be very hard to maintain. 
+
+## Better way - Filter/Criteria Patter
+It would be awesome if : 
+* If we could create lots of criaterias and hardly touch them.
+* If we want to add criteria we dont touch existing code (less testing/impact).
+* If we could combine them in AND/OR however we want and create a single criteria out of it. 
+
+
+

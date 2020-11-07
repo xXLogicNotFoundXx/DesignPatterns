@@ -31,6 +31,6 @@ It would be awesome if :
 * If we want to add criteria we dont touch existing code (less testing/impact).
 * If we could combine them with AND/OR in whatever fasion and create a single criteria out of it. 
 
-![](https://github.com/xXLogicNotFoundXx/DesignPatterns/blob/main/Filter/FilterPattern1.png)
+![](https://github.com/xXLogicNotFoundXx/DesignPatterns/blob/main/Filter/FilterPattern.png)
 
 

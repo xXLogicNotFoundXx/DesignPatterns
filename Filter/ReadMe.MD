@@ -44,10 +44,12 @@ It would be awesome if :
   // ..... then it will perform UNION on it.
   Criteria singleOrFemale = new OrCriteria(single, female);  
   
-  singleMale(people); // returns single males 
+  // returns single males 
+  singleMale.meetCriteria(people); 
   
   // You can keep adding criteria to create chain of them 
   Criteria singleMaleAgeThirtyPlus = new AndCriteria(singleMale, new CriteriaAge(30,Interger.MAX_VALUE));
   
-  singleMaleAgeThirtyPlus.meetCriteria(people); // returns single males of 30+ age 
+  // returns single males of 30+ age 
+  singleMaleAgeThirtyPlus.meetCriteria(people); 
 ```

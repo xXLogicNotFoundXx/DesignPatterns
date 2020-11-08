@@ -65,3 +65,5 @@ Name : John
 Name : Julie
 Name : Laura
 ```
+
+More on inner classes : https://www.programiz.com/java-programming/nested-inner-class

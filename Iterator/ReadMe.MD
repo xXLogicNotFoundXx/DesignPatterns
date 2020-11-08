@@ -13,10 +13,11 @@ public interface Iterator {
    public Object next();
 }
 
-public class NameRepository implements Container {
+public class NameRepository {
    public String names[] = {"Robert" , "John" ,"Julie" , "Laura"};
 
-   @Override
+   // You can have separate interface Container 
+   // which has "getIterator(): Object", but i dont see the point doing it.  
    public Iterator getIterator() {
       return new NameIterator();
    }

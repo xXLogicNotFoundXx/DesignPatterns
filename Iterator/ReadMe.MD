@@ -23,12 +23,12 @@ public class NameRepository implements Container {
 
    private class NameIterator implements Iterator {
 
-      int index;
+      int index=0;
 
       @Override
       public boolean hasNext() {
       
-         if(index < names.length){
+         if(index < names.length){	// inner classes has access to private members of outer class.
             return true;
          }
          return false;

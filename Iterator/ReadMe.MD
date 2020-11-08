@@ -14,7 +14,7 @@ public interface Iterator {
 }
 
 public class NameRepository implements Container {
-   public String names[] = {"Robert" , "John" ,"Julie" , "Lora"};
+   public String names[] = {"Robert" , "John" ,"Julie" , "Laura"};
 
    @Override
    public Iterator getIterator() {
@@ -63,5 +63,5 @@ public class IteratorPatternDemo {
 Name : Robert
 Name : John
 Name : Julie
-Name : Lora
+Name : Laura
 ```

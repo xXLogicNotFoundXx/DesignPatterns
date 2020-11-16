@@ -15,16 +15,16 @@ class ImageProxy implements Icon {
      
 	public int getIconWidth() {
 		if (imageIcon != null) {
-            return imageIcon.getIconWidth();
-        } else {
+			return imageIcon.getIconWidth();
+		} else {
 			return 800;
 		}
 	}
  
 	public int getIconHeight() {
 		if (imageIcon != null) {
-            return imageIcon.getIconHeight();
-        } else {
+            		return imageIcon.getIconHeight();
+        	} else {
 			return 600;
 		}
 	}

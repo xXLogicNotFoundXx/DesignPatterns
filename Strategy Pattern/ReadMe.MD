@@ -18,9 +18,8 @@ Class Duck
 * Fly()
 * Display()
 
-Now we have WildDuck, CityDucks, MountainDuck and RubberDuck classes.\
-WildDuck, CityDucks shares the same Fly() beahvior. MountainDuck, RubberDuck shares the same Fly() beahvior.\
-WildDuck, MountainDuck shares the same Display() beahvior. CityDuck, RubberDuck shares the same Display() beahvior.\
+Now let's say we have WildDuck, CityDucks, MountainDuck and RubberDuck classes.\
+![](https://github.com/xXLogicNotFoundXx/DesignPatterns/blob/main/Strategy%20Pattern/img/StrategyDuckInherit.png)
 
 Now at this point you can see lot of code will be duplicated. You can build different heirarchy but you will end up in a situation where the beahviour needed to be 
 shared horizontally between the classes. So you can either have duplicate code or you have to find another solution. 
@@ -86,8 +85,6 @@ Class RubberDuck extends Duck {
 ### DUCK Strategy UML
 ![UML Strategy](https://github.com/xXLogicNotFoundXx/DesignPatterns/blob/main/Strategy%20Pattern/img/UMLDuckStrategy.png)
 
-# Strategy Pattern UML
-![UML Strategy](http://www.programmingwithwolfgang.com/wp-content/uploads/2018/01/Strategy.jpg)
 
 
 Use Case 1 : 

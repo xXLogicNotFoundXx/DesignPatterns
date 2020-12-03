@@ -15,6 +15,8 @@ In case of logger we can have log level and depending on the log level appropria
 ![](https://github.com/xXLogicNotFoundXx/DesignPatterns/blob/main/Chain%20of%20Responsibility/img/Chain%20of%20Responsibility.png)
 
 ### Each object in the chain acts as a handler and has a successor object. If it can handle the request, it does; otherwise, it forwards the request to its successor.
+![](https://github.com/xXLogicNotFoundXx/DesignPatterns/blob/main/Chain%20of%20Responsibility/img/Email%20Chain%20Handler.png)
+
 
 ### Chain of Responsibility Benefits
 * Decouples the sender of the request and its receivers.

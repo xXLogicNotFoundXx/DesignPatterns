@@ -8,21 +8,21 @@
 ![](https://github.com/xXLogicNotFoundXx/DesignPatterns/blob/main/Iterator/IteratorPattern.png)
 
 ```
-public interface Iterator {
+public interface Iterator<T> {
    public boolean hasNext();
-   public Object next();
+   public T next();
 }
 
 public class NameRepository {
    public String names[] = {"Robert" , "John" ,"Julie" , "Laura"};
 
    // You can have separate interface Container 
-   // which has "getIterator(): Object", but i dont see the point doing it.  
-   public Iterator getIterator() {
+   // which has "getIterator(): <T>", but i dont see the point doing it. 
+   public Iterator<NameRepository> getIterator() {
       return new NameIterator();
    }
 
-   private class NameIterator implements Iterator {
+   private class NameIterator implements Iterator<NameRepository> {
 
       int index=0;
 
@@ -36,7 +36,7 @@ public class NameRepository {
       }
 
       @Override
-      public Object next() {
+      public NameRepository next() {
       
          if(this.hasNext()){
             return names[index++];

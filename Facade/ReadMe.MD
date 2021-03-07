@@ -1,4 +1,6 @@
 # Facade Pattern
+I feel like Facade isn’t actually a Design Pattern; it’s more of a programming idiom.
+
 ## The Facade Pattern provides a unified interface to a set of interfaces in a subsytem. Facade defines a higher- level interface that makes the subsystem easier to use.
 * To use the Facade Pattern, we create a class that simplifies and unifies a set of more
 complex classes that belong to some subsystem. Unlike a lot of patterns, Facade is fairly straightforward; there are no mind bending abstractions to get your head around. But that doesn’t make it any less powerful: the Facade Pattern allows us to avoid tight coupling between clients and subsystems

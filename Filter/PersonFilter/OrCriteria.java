@@ -14,12 +14,42 @@ public class OrCriteria implements Criteria {
    public List<Person> meetCriteria(List<Person> persons) {
       List<Person> firstCriteriaItems = criteria.meetCriteria(persons);
       List<Person> otherCriteriaItems = otherCriteria.meetCriteria(persons);
-
+      
+      Set<Person> set = new HashSet<>(firstCriteriaItems);
       for (Person person : otherCriteriaItems) {
-         if(!firstCriteriaItems.contains(person)){
-            firstCriteriaItems.add(person);
-         }
-      }	
-      return firstCriteriaItems;
+         set.add(person);
+      }
+      
+      return new ArrayList<>(set);
    }
 }
+
+/*
+You can totally make this implementation as Generic type.
+You never have to write these criterias for different classes. 
+*/
+public class OrCriteria<T> implements Criteria<T> {
+
+   private Criteria criteria;
+   private Criteria otherCriteria;
+
+   public OrCriteria(Criteria<T> criteria, Criteria<T> otherCriteria) {
+      this.criteria = criteria;
+      this.otherCriteria = otherCriteria; 
+   }
+
+   @Override
+   public List<T> meetCriteria(List<T> items) {
+      List<T> firstCriteriaItems = criteria.meetCriteria(items);
+      List<T> otherCriteriaItems = otherCriteria.meetCriteria(items);
+      
+      Set<T> set = new HashSet<>(firstCriteriaItems);
+      for (T item : otherCriteriaItems) {
+         set.add(item);
+      }
+      
+      return new ArrayList<T>(set);
+   }
+}
+
+

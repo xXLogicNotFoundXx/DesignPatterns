@@ -5,3 +5,4 @@
 * In my opinion it is almost like Pub-Sub model (Push Model).
 * In observer pattern we dont talk about publisher but there has to be someone who feeds data OR cahnge the sate of the Subject Class. 
 
+![](https://github.com/xXLogicNotFoundXx/DesignPatterns/blob/main/Observer/IMG/Observer%20Pattern.png)

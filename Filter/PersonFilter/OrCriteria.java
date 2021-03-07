@@ -30,8 +30,8 @@ You never have to write these criterias for different classes.
 */
 public class OrCriteria<T> implements Criteria<T> {
 
-   private Criteria criteria;
-   private Criteria otherCriteria;
+   private Criteria<T> criteria;
+   private Criteria<T> otherCriteria;
 
    public OrCriteria(Criteria<T> criteria, Criteria<T> otherCriteria) {
       this.criteria = criteria;

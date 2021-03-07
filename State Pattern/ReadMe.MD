@@ -47,3 +47,7 @@ Test all of it.
 * Then we’re going to implement a State class for every state of the machine. These classes will be responsible for the behavior of the machine when it is in the corresponding state.
 * Finally, we’re going to get rid of all of our conditional code and instead delegate to the state class to do the work for us.
 
+![](https://github.com/xXLogicNotFoundXx/DesignPatterns/blob/main/State%20Pattern/IMG/State%20Pattern1.png)
+![](https://github.com/xXLogicNotFoundXx/DesignPatterns/blob/main/State%20Pattern/IMG/State%20Pattern2.png)
+![](https://github.com/xXLogicNotFoundXx/DesignPatterns/blob/main/State%20Pattern/IMG/State%20Pattern3.png)
+![](https://github.com/xXLogicNotFoundXx/DesignPatterns/blob/main/State%20Pattern/IMG/State%20Pattern4.png)

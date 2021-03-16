@@ -12,12 +12,15 @@ class ParkingLotSystem {
     ParkingSpot getAvailableParkingSpot(Vehicle v); // iterate through all floors and get the spot 
 }
 
-class Gate { // Class becauze we have default attributes in it
+class abstract Gate { // Class becauze we have default attributes in it
     int gateId;
     ParkingAttendant attendant;
 }
 
 class Entrance extends Gate {
+    Entrance(int id){
+    }
+    
     ParkingTicket getParking(Vehicle v){
       // get the free spot for vehile 
       // return parking ticket 

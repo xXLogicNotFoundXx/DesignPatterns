@@ -93,10 +93,12 @@ import java.util.Date;
     
     // Now, interviewer is saying we want Date Cell and we should be able to provide formated output? 
     class CellDateImpl extends CellImpl<Date>{
-        static Set<String> formats = new HashSet<String>() {
+        static Set<String> formats = new HashSet<String>();
+        
+        static { // this is how you initialize static members. 
             formats.add("DD::MM:YYYY");
             formats.add("MM::DD:YYYY");
-        };  // static 
+        }  // static 
        
         public CellDateImpl(Date val){
             super(val);

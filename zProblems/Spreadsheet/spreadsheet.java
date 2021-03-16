@@ -143,3 +143,21 @@ How would you extend this to have expressiong values
 lie =A1+B1
 */
     
+ public interface Cell{
+        Expression getValue();
+        void setValue(Expression val);
+        
+   
+        Set<String> getFormats();
+        
+        // How would you fo 
+        // T Sum(Cell c);
+        // T RangeSum(int r, );
+        // T minus(Cell c);
+        // T RangeMinus(int r, );  etc .. 
+ }
+
+class CellImpl implements Cell {
+    Expression e;
+    Cell(Expression);
+}

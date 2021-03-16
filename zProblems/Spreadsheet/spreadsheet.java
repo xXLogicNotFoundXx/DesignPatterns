@@ -93,18 +93,16 @@ import java.util.Date;
     
     // Now, interviewer is saying we want Date Cell and we should be able to provide formated output? 
     class CellDateImpl extends CellImpl<Date>{
-        Set<String> formats = new HashSet<String>();
+        static Set<String> formats = new HashSet<String>() {
+            formats.add("DD::MM:YYYY");
+            formats.add("MM::DD:YYYY");
+        };  // static 
        
         public CellDateImpl(Date val){
             super(val);
             init();
         }
-        
-        private void init(){
-            formats.add("DD::MM:YYYY");
-            formats.add("MM::DD:YYYY");
-        }
-        
+
         public Date getValue(){
             return super.getValue();
         }
@@ -138,8 +136,8 @@ import java.util.Date;
      and obviously you CANT have Cell<Object implements SecurtiyObject> 
     */
     
-    /* Note : 2
-       Set<String>  getFormats shouldnt be returning a thing from object level set<>
-       ye set object static hona mangta .. it should be for all objects ..
-    */
+/*
+How would you extend this to have expressiong values 
+lie =A1+B1
+*/
     

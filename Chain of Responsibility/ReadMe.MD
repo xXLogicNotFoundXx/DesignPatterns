@@ -3,6 +3,10 @@ The chain of responsibility pattern creates a chain of handler objects for a req
 This pattern allows you to add or remove responsibilities dynamically by changing the members or order of the chain.\
 https://www.tutorialspoint.com/design_pattern/chain_of_responsibility_pattern.htm
 
+This pattern nis based on inheritance. If you think about this we need handle() common method which would handle the request and pass to another object. 
+Actul handling has to be abstract method that each subclass has to implement. 
+![](https://github.com/xXLogicNotFoundXx/DesignPatterns/blob/main/Chain%20of%20Responsibility/img/Chain%20of%20Responsibility%20Pattern.png)
+
 ### With the Chain of Responsibility Pattern, you create a chain of objects that examine a request. Each object in turn examines the request and handles it, or passes it on to the next object in the chain.
 It doesnt have to be handle/pass relationship. You can modify in way that every chain object handle the request for example. 
 Let say you wan to write logs to the File, DB and Console too. You can create a Chain of the loggers and each one can write it to respective places.

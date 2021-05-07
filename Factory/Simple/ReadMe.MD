@@ -17,5 +17,6 @@ You have **Pizza** Product and Concrete products are **CheesePizza, PepperoniPiz
 Then You have **PizzaStoreFactory** and static method **Pizza CreatePizza(Type t);**. (Type is Cheeze or Pepperoni)\
 Depending on the type provided you return CheesePizza OR PepperoniPizza.
 
-
-
+For eg 3:\
+In chain of responsibility pattern. It is better to have static factory method where we create all object and link them in chain. 
+[Sample](https://github.com/xXLogicNotFoundXx/DesignPatterns/blob/main/Chain%20of%20Responsibility/Logger/ChainPatternDemo.java)

@@ -1,7 +1,8 @@
 package headfirst.templatemethod.barista;
 
 public abstract class CaffeineBeverage {
-  
+  	
+	// final method so child classes dont override this method. 
 	final void prepareRecipe() {
 		boilWater();
 		brew();
